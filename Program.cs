@@ -56,10 +56,11 @@ public class Program
         {
             Console.Write(s[i]);
         }
+        Console.WriteLine();
     }
     public static double SquareRoot(double root)
     {
-        double a = root;
+        
         double squareRoot =  root / 2;
 
         while (true)
