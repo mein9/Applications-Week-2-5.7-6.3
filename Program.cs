@@ -52,7 +52,7 @@ public class Program
     public static void ReverseString(string s)
     {
         int length = s.Length;
-        for (int i = length - 1; i >= 0; i--)
+        for (int i = length - 1; i >= 0; i--) // repeats down from the string length -1 to 0
         {
             Console.Write(s[i]);
         }
@@ -66,10 +66,11 @@ public class Program
         while (true)
         {
             double nextSquareRoot = (squareRoot + root / squareRoot) / 2;
-            if (Math.Abs(squareRoot - nextSquareRoot) < 0.0001)
+
+            if (Math.Abs(squareRoot - nextSquareRoot) < 0.0001) //repeats until within acceptable range of square root
                 break;
 
-            squareRoot = nextSquareRoot;
+            squareRoot = nextSquareRoot; // sets the loop up with the closest number so far
         }
         return squareRoot;
     }
