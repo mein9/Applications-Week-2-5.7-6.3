@@ -49,14 +49,15 @@ public class Program
             Console.WriteLine(s[i]);
         }
     }
-    public static void ReverseString(string s)
+    public static string ReverseString(string s)
     {
-        int length = s.Length;
-        for (int i = length - 1; i >= 0; i--) // repeats down from the string length -1 to 0
+        StringBuilder reversed = new StringBuilder();
+        for (int i = s.Length - 1; i >= 0; i--)
         {
-            Console.Write(s[i]);
+            reversed.Append(s[i]);
         }
-        Console.WriteLine();
+        return reversed.ToString();
+        }
     }
     public static double SquareRoot(double root)
     {
